@@ -1,7 +1,7 @@
 body {
     font-family: 'Orbitron', sans-serif;
     background: linear-gradient(45deg, #1a1a2e, #16213e);
-    color: #e94560;
+    color: #f40a31;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ body {
     font-size: 1.5em;
     margin-bottom: 20px;
     color: #00ff00;
-    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    text-shadow: 0 0 10px rgba(18, 19, 18, 0.1);
 }
 
 .reels {
@@ -57,19 +57,16 @@ body {
     font-weight: bold;
     transition: all 0.3s ease;
     background-color: #0f3460;
-    color: #e94560;
+    color: #e7052b;
 }
 
-@keyframes spin {
-    0% {
-        transform: translateY(0) rotateX(0deg);
-    }
-    50% {
-        transform: translateY(-300%) rotateX(180deg);
-    }
-    100% {
-        transform: translateY(-600%) rotateX(360deg);
-    }
+@keyframes slowSpin {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-300%); }
+}
+
+.spin-animation .symbol {
+    animation: slowSpin 1.5s ease-in-out forwards;
 }
 
 .spin-animation {
@@ -90,9 +87,9 @@ button {
 }
 
 button:hover {
-    background-color: #ff6b81;
+    background-color: #f30424;
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(233,69,96,0.4);
+    box-shadow: 0 5px 15px rgba(10, 9, 9, 0.3);
 }
 
 .controls {
@@ -114,5 +111,5 @@ button:hover {
     margin-top: 15px;
     font-size: 1.2em;
     color: #00ff00;
-    text-shadow: 0 0 10px rgba(0,255,0,0.5);
+    text-shadow: 0 0 10px rgba(52, 63, 22, 0.1);
 }
